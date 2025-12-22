@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_practice_1/big_album.dart';
+import 'package:flutter_practice_1/mini_album.dart';
 import 'package:flutter_practice_1/rounded_image.dart';
 import 'package:flutter_practice_1/title_row.dart';
 
@@ -88,7 +89,22 @@ class HomePage extends StatelessWidget {
 
           // 제목행
           TitleRow(title: "Song List"),
-          // TODO 작은앨범들어가는 로우
+          // 작은앨범들어가는 로우
+          MiniAlbum(
+            imageUrl: 'https://picsum.photos/id/222/200/200',
+            title: '가을안부',
+            artist: '먼데이키즈',
+          ),
+          MiniAlbum(
+            imageUrl: 'https://picsum.photos/id/228/200/200',
+            title: '죄와 벌',
+            artist: 'SG워너비',
+          ),
+          MiniAlbum(
+            imageUrl: 'https://picsum.photos/id/123/200/200',
+            title: 'Go Away',
+            artist: '투애니원',
+          ),
         ],
       ),
     );
