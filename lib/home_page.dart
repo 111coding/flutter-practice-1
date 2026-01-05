@@ -1,6 +1,8 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_practice_1/speed.dart';
+import 'package:flutter_practice_1/temp.dart';
 import 'package:flutter_practice_1/weather.dart';
 import 'package:http/http.dart';
 
@@ -10,7 +12,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  String displayTemp = "";
+  Weather? weather;
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +24,8 @@ class _HomePageState extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text(displayTemp, style: TextStyle(fontSize: 36)),
+            if (weather != null) Temp(weather: weather!),
+            if (weather != null) Speed(weather: weather!),
             IconButton(
               onPressed: () async {
                 // 1. 정보 달라고 편지 쓰기! -> http 통신 GET 요청
@@ -40,8 +43,7 @@ class _HomePageState extends State<HomePage> {
                 Map<String, dynamic> jsonMap = jsonDecode(r.body);
                 // 4. Map을 객체로 변경 (3~4 : 역직렬화)
                 Weather w = Weather.fromJson(jsonMap);
-                displayTemp =
-                    "${w.currentWeather.temperature} ${w.currentWeatherUnits.temperature}";
+                weather = w;
                 setState(() {});
               },
               icon: Icon(Icons.refresh),
