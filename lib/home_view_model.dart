@@ -39,16 +39,15 @@ class HomeViewModel extends Notifier<HomeState> {
   }
 }
 
-
+// 객체를 한번만 생성하기 위해서 사용
+// 싱글톤 패턴 -> 객체를 한번만 생성 -> 이거를 쉽게 할 수 있는게 NotifierPrivider
 // 로직과 상태가 분리 완료
 // 이제부터는 사용에 관한 내용
 // 의존성 주입
 // 객체를 HomePage에서 직접생성하면 여전히 자녀위젯에 생성자를 통해 전달해줘야하는 불편함 존재
 // 객체를 직접 생성하지 않고 공급해주는 NotifierProvider 사용! => 의존성 주입
 // NotifierProvider는 공급해줄 객체 (뷰모델)의 타입과 상태클래스 타입을 제너릭으로 명시 해줘야함
-final homeViewModelProvider = NotifierProvider<HomeViewModel, HomeState>(
-  () {
-    print("홈뷰모델 생성됨");
-    return HomeViewModel();
-  },
-);
+final homeViewModelProvider = NotifierProvider<HomeViewModel, HomeState>(() {
+  print("홈뷰모델 생성됨");
+  return HomeViewModel();
+});
