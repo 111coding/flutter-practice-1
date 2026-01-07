@@ -1,0 +1,106 @@
+{
+  "project_info": {
+    "project_number": "417907338074",
+    "project_id": "engleesh-e3144",
+    "storage_bucket": "engleesh-e3144.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:417907338074:android:958c82e767acc9b568e163",
+        "android_client_info": {
+          "package_name": "com.example.flutter_practice_1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "417907338074-ftf3tkmgln699cno8ckgp1rtfaqs8hm2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA606gvRbmvk-z2iIPbKG4EhPQrKHbOySk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "417907338074-ftf3tkmgln699cno8ckgp1rtfaqs8hm2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "417907338074-a9lobadmcnv9pit2s2c05ahecgh5cq3r.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "net.halowd.engleesh"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:417907338074:android:305f4c51676445c668e163",
+        "android_client_info": {
+          "package_name": "net.halowd.engleesh"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "417907338074-beigrlbhoticd4ma5sn0lbilg8sasom0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "net.halowd.engleesh",
+            "certificate_hash": "7a2233688c84344bcec11949c26dba1c939921eb"
+          }
+        },
+        {
+          "client_id": "417907338074-lj6ohnq2iig0lpuk6ochhrhnum22b08o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "net.halowd.engleesh",
+            "certificate_hash": "0039c6e4fa12e482a87a392d5a2a2e21e20cacdb"
+          }
+        },
+        {
+          "client_id": "417907338074-tq8sq0q5ovl43vdvrqm0nssh1ddarafg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "net.halowd.engleesh",
+            "certificate_hash": "1fb7f8b4b73697d1729f3ab7211c96499722293d"
+          }
+        },
+        {
+          "client_id": "417907338074-ftf3tkmgln699cno8ckgp1rtfaqs8hm2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA606gvRbmvk-z2iIPbKG4EhPQrKHbOySk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "417907338074-ftf3tkmgln699cno8ckgp1rtfaqs8hm2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "417907338074-a9lobadmcnv9pit2s2c05ahecgh5cq3r.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "net.halowd.engleesh"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
