@@ -1,10 +1,15 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_practice_1/firebase_options.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  await Firebase.initializeApp(
+    // name:
+    //     "NOT_DEFAULT", // prevent `A Firebase App named "[DEFAULT]" already exists`
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
 
   runApp(const MyApp());
 }
@@ -63,6 +68,18 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _incrementCounter() {
     setState(() {
+      // 여기서 matzip 폴더(컬렉션)에 맛집 파일(문서) 하나 추가할거임
+      // 1. 폴더 찾아갈 수 있는 행위 -> 컬렉션 참조 만들기
+      final colRef = FirebaseFirestore.instance.collection('matzip');
+
+      // 2. 위에서 만든 컬렉션 참조로 문서 만들기
+      Map<String, dynamic> data = {
+        '상호명': '이재모피자',
+        '주소': '부산광역시 부산진구',
+        '맛': '기대보다 별로',
+      };
+      colRef.add(data);
+
       // This call to setState tells the Flutter framework that something has
       // changed in this State, which causes it to rerun the build method below
       // so that the display can reflect the updated values. If we changed
